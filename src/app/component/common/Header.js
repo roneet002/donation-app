@@ -1,7 +1,14 @@
+"use client"
 import React from 'react'
 import './Header.css';
 import Image from 'next/image';
-// import styles from './Header.module.css';
+import { Button, Nav } from 'react-bootstrap';
+import Link from 'next/link';
+
+import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = () => {
   return (
@@ -54,81 +61,53 @@ const Header = () => {
         </div>
     </header>
   
-    <Navbar />
+    <NavbarNew />
 </>
   )
 }
+const NavbarNew = () =>{
+   return(
+    <Navbar expand="lg" className="bg-body-tertiary">
+    <Container>
+      <Navbar.Brand href="index.html"> <Image
+                  src="/assets/images/logo.png"
+                  alt="Vercel Logo"
+                  className="vercelLogo"
+                  width={80}
+                  height={80}
+                  priority
+                />
+    </Navbar.Brand>
+
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="ms-auto">
+          <Nav.Link href="#section_1">Home</Nav.Link>
+          <Nav.Link href="#section_2">About</Nav.Link>
+          <Nav.Link href="#section_3">Causes</Nav.Link>
+          <Nav.Link href="#section_3">Volunteer</Nav.Link>
+
+          <NavDropdown title="News" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.2">
+             News Listing
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">News Detail</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+              Separated link
+            </NavDropdown.Item>
+          </NavDropdown>
+
+          <Nav.Link href="#section_3">Contact</Nav.Link>
+          <Nav.Link className="nav-link custom-btn custom-border-btn btn" href="donate.html">Login</Nav.Link>
 
 
-const Navbar = () =>{
-return(
-  <nav className="navbar navbar-expand-lg bg-light shadow-lg">
-  <div className="container">
-      <a className="navbar-brand" href="index.html">
-          {/* <img src="" className="logo img-fluid" alt="Kind Heart Charity"> */}
-          <Image
-              src="/assets/images/logo.png"
-              alt="Vercel Logo"
-              className="vercelLogo"
-              width={80}
-              height={80}
-              priority
-            />
-          <span>
-              Kind Heart Charity
-              <small>Non-profit Organization</small>
-          </span>
-      </a>
-
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                  <a className="nav-link click-scroll" href="#top">Home</a>
-              </li>
-
-              <li className="nav-item">
-                  <a className="nav-link click-scroll" href="#section_2">About</a>
-              </li>
-
-              <li className="nav-item">
-                  <a className="nav-link click-scroll" href="#section_3">Causes</a>
-              </li>
-
-              <li className="nav-item">
-                  <a className="nav-link click-scroll" href="#section_4">Volunteer</a>
-              </li>
-
-              <li className="nav-item dropdown">
-                  <a className="nav-link click-scroll dropdown-toggle" href="#section_5"
-                      id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">News</a>
-
-                  <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                      <li><a className="dropdown-item" href="news.html">News Listing</a></li>
-
-                      <li><a className="dropdown-item" href="news-detail.html">News Detail</a></li>
-                  </ul>
-              </li>
-
-              <li className="nav-item">
-                  <a className="nav-link click-scroll" href="#section_6">Contact</a>
-              </li>
-
-              <li className="nav-item ms-3">
-                  <a className="nav-link custom-btn custom-border-btn btn" href="donate.html">Login</a>
-              </li>
-          </ul>
-      </div>
-  </div>
-</nav>
-
-)
-
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
+   )
 }
 
 export default Header
+

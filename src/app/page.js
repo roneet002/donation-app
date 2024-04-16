@@ -1,11 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "./component/common/Header";
+import HomeCarousel from "./component/Home/HomeCarousel/HomeCarousel";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <>
+    
       <Header />
+    <main className={styles.main}>
+      <HomeCarousel />
       {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -93,5 +97,6 @@ export default function Home() {
         </a>
       </div> */}
     </main>
+    </>
   );
 }
