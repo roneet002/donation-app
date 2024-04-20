@@ -1,0 +1,135 @@
+
+/*---------------------------------------
+  VOLUNTEER              
+-----------------------------------------*/
+.volunteer-section {
+    background: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .volunteer-section::after {
+    content: "";
+    background: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -110px;
+    right: -80px;
+    width: 350px;
+    height: 350px;
+  }
+  
+  .volunteer-form {
+    background: var(--white-color);
+    border-radius: var(--border-radius-medium);
+    padding: 50px;
+  }
+  
+  .volunteer-image {
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .volunteer-section .custom-block-body {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  
+  .volunteer-section .custom-block-body p {
+    line-height: 1.7;
+  }
+  
+  .custom-form .form-control, .input-group-file {
+    background-color: var(--section-bg-color);
+    box-shadow: none;
+    border: 0;
+    color: var(--p-color);
+    margin-bottom: 24px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    outline: none;
+}
+
+.custom-form button[type="submit"] {
+    background: var(--custom-btn-bg-color);
+    border: none;
+    border-radius: var(--border-radius-large);
+    color: var(--white-color);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-semibold);
+    transition: all 0.3s;
+    margin-bottom: 0;
+}
+
+.custom-form .form-control, .input-group-file {
+    background-color: var(--section-bg-color);
+    box-shadow: none;
+    border: 0;
+    color: var(--p-color);
+    margin-bottom: 24px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    outline: none;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control, .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-control[type=file]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+}
+
+.input-group-file input[type=file] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    padding: 0;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.custom-form .input-group-text {
+    background: var(--secondary-color);
+    border: 0;
+    color: var(--white-color);
+}
+.input-group-file .input-group-text {
+    background: transparent;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+@media screen and (max-width: 991px) {
+    .section-padding {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .custom-text-box, .volunteer-form {
+        padding: 30px;
+    }
+}

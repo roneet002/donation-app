@@ -67,9 +67,9 @@ const Header = () => {
 }
 const NavbarNew = () =>{
    return(
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary sticky-top">
     <Container>
-      <Navbar.Brand href="index.html"> <Image
+      <Navbar.Brand href="/"> <Image
                   src="/assets/images/logo.png"
                   alt="Vercel Logo"
                   className="vercelLogo"
@@ -82,7 +82,7 @@ const NavbarNew = () =>{
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <Nav.Link href="#section_1">Home</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="#section_2">About</Nav.Link>
           <Nav.Link href="#section_3">Causes</Nav.Link>
           <Nav.Link href="#section_3">Volunteer</Nav.Link>
@@ -99,7 +99,7 @@ const NavbarNew = () =>{
           </NavDropdown>
 
           <Nav.Link href="#section_3">Contact</Nav.Link>
-          <Nav.Link className="nav-link custom-btn custom-border-btn btn" href="donate.html">Login</Nav.Link>
+          <Nav.Link className="nav-link custom-btn custom-border-btn btn" href="/Login">Login</Nav.Link>
 
 
         </Nav>
